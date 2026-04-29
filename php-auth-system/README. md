@@ -1,0 +1,63 @@
+PHP Auth System
+
+Secure login/signup system built with raw PHP, MySQLi (OOP), and Docker.
+
+Features:
+
+- User registration & login
+- Password hashing (bcrypt)
+- MySQLi prepared statements (SQL injection protection)
+- Session management
+- Environment variables (.env)
+- Dockerized environment
+
+Tech Stack:
+
+- PHP 8.5
+- MySQLi (OOP style)
+- MySQL 8.0
+- Docker & Docker Compose
+
+Project Structure:
+├── auth/
+│ ├── login.php # Login handler
+│ └── signup.php # Signup handler
+├── css/
+│ ├── login.css
+│ ├── main.css
+│ ├── profile.css
+│ └── signup.css
+├── .env # Database credentials (gitignored)
+├── config.php # Database class with MySQLi methods
+├── docker-compose.yml
+├── Dockerfile
+├── index.php
+├── login.html # Login form
+├── signup.html # Signup form
+└── profile.php # User dashboard
+
+
+Run Locally:
+  ```bash
+  Clone repo
+  git clone https://github.com/yourusername/php-mysqli-auth.git
+  cd php-auth-system
+  # Copy environment config
+  cp .env.example .env
+  # create .env with :
+    Environment Variables:
+      DB_HOST=db
+      DB_NAME=your_database
+      DB_USER=your_username
+      DB_PASSWORD=your_password
+      DB_ROOT_PASSWORD=your_root_password
+  # Start Docker containers
+  docker-compose up -d
+  # Import database schema
+  docker exec -i mysql-container mysql -u root -p your_db < schema.sql
+  Access: http://localhost:8080
+Security:
+  Password hashing with bcrypt.
+  MySQLi prepared statements (bind_param).
+  Session regeneration on login.
+  Environment variables for credentials.
