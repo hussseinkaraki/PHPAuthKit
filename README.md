@@ -1,4 +1,4 @@
-# PHP Auth System
+# PHPAuthKit
 
 Simple authentication app built with raw PHP, MySQLi, and Docker.
 

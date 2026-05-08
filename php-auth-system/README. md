@@ -1,4 +1,4 @@
-PHP Auth System
+PHPAuthKit
 
 Secure login/signup system built with raw PHP, MySQLi (OOP), and Docker.
 
@@ -41,7 +41,7 @@ Run Locally:
   ```bash
   Clone repo
   git clone https://github.com/yourusername/php-mysqli-auth.git
-  cd php-auth-system
+  cd PHPAuthKit
   # Copy environment config
   cp .env.example .env
   # create .env with :
